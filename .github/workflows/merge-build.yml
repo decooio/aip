@@ -17,10 +17,10 @@ jobs:
           gatsby-args: --prefix-paths
       - name: Upload to Crust and IPFS
         id: upload
-        uses: crustio/ipfs-upload-action@1.0.2
+        uses: crustio/ipfs-upload-action@v1.0.2
         with:
           path: './public'
-          seeds: ${{ secrets.CRUST_SECRET_KEY }}
+          crust-secret-key: ${{ secrets.CRUST_SECRET_KEY }}
       - name: Pin to Crust
         uses: crustio/ipfs-crust-action@v1.0.8
         continue-on-error: true
