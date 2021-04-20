@@ -5,6 +5,7 @@ const fetch = require('node-fetch')
 const { exec, spawn } = require('child_process');
 
 const { PINATA_KEY, PINATA_SECRET} = process.env;
+const pinCrust = require('./pin-crust')
 
 const pinataEndpoint = 'https://api.pinata.cloud/pinning/pinJSONToIPFS'
 
@@ -55,10 +56,10 @@ Object.keys(jsonAips).forEach((id) => {
       }
       console.log(stdout)
     });
+    return pinCrust.placeStorageOrder(hash)
   }).catch((err) => {
     console.log('error:', err);
   })
 })
 
 
-  
