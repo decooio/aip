@@ -22,9 +22,9 @@ jobs:
           path: './public'
           seeds: ${{ secrets.CRUST_SECRET_KEY }}
       - name: Pin to Crust
-          uses: crustio/ipfs-crust-action@v1.0.8
-          continue-on-error: true
-          timeout-minutes: 2
-          with:
-            cid: ${{ steps.upload.outputs.hash }}
-            seeds: ${{ secrets.CRUST_SEEDS }}
+        uses: crustio/ipfs-crust-action@v1.0.8
+        continue-on-error: true
+        timeout-minutes: 2
+        with:
+          cid: ${{ steps.upload.outputs.hash }}
+          seeds: ${{ secrets.CRUST_SEEDS }}
