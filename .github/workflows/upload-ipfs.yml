@@ -31,6 +31,7 @@ jobs:
         env:
           PINATA_KEY: ${{ secrets.PINATA_KEY }}
           PINATA_SECRET: ${{ secrets.PINATA_SECRET }}
+          CRUST_SECRET: ${{ secrets.CRUST_SECRET }}
         run: npm run upload:pinata-thegraph
 
       - name: Commit changes

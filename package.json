@@ -9,6 +9,9 @@
     "David Truong <david@aave.com>"
   ],
   "dependencies": {
+    "@crustio/type-definitions": "0.0.6",
+    "@polkadot/api": "^4.6.1",
+    "@polkadot/keyring": "^6.2.1",
     "@react-hook/window-size": "^3.0.6",
     "bs58": "^4.0.1",
     "classnames": "^2.2.6",
